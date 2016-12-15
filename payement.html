@@ -3,6 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <title>Miagazon</title>
+        <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+        <script type="text/javascript">
+            Stripe.setPublishableKey('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
+        </script>
     </head>
 
     <body>
@@ -10,7 +14,19 @@
         <h2>Votre commande</h2>
         <hr>
         <h3>Paiement en ligne</h3>
-        <p>∕∕TODO</p>
+        <form action="credit.php" method="POST">
+            <script
+                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="pk_test_8PjrzlPMCS5BXeuLDykEvVBE"
+                data-amount="999"
+                data-name="Demo Site"
+                data-description="Widget"
+                data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                data-locale="auto"
+                data-zip-code="true"
+                data-currency="eur">
+            </script>
+        </form>
     </body>
 
 </html>
