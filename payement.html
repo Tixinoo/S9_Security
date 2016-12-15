@@ -3,6 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <title>Miagazon</title>
+
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+
         <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
         <script type="text/javascript">
             Stripe.setPublishableKey('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
@@ -15,6 +19,7 @@
         <hr>
         <h3>Paiement en ligne</h3>
         <form action="credit.php" method="POST">
+            <a href="supermarche.html" class="btn btn-danger" ><- Retour</a>  
             <script
                 src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                 data-key="pk_test_8PjrzlPMCS5BXeuLDykEvVBE"
@@ -27,6 +32,8 @@
                 data-currency="eur">
             </script>
         </form>
+
+        
     </body>
 
 </html>
