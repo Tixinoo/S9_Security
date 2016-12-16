@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__  . '/vendor/autoload.php';
+require __DIR__  . '/../vendor/autoload.php';
 
 $apiContext = new \PayPal\Rest\ApiContext(
     new \PayPal\Auth\OAuthTokenCredential(
@@ -28,10 +28,10 @@ $apiContext->setConfig(
 
 // After Step 3
 try {
-    /*$creditCard->create($apiContext);
-    echo $creditCard;*/
+    $creditCard->create($apiContext);
+    echo $creditCard;
 
-    $creditCard = new \PayPal\Api\CreditCard(
+    /*$creditCard = new \PayPal\Api\CreditCard(
     '{
     "type": "visa",
     "number": "4417119669820331",
@@ -42,7 +42,7 @@ try {
     "last_name": "Shopper"
     }');
     // This will print the number
-    echo $creditCard->getNumber();
+    echo $creditCard->getNumber();*/
 }
 catch (\PayPal\Exception\PayPalConnectionException $ex) {
     // This will print the detailed information on the exception. 
